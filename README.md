@@ -112,3 +112,4 @@ src/
 ├── navigation.ts       # Konfigurasi Menu Header & Footer
 └── config.yaml         # Konfigurasi Global Site (Judul, Deskripsi)
 ```
+"# alatantrian-pendidikan" 
