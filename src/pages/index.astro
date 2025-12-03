@@ -1,0 +1,388 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Brands from '~/components/widgets/Brands.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+const metadata = {
+  title: 'Solusi Antrian Kampus & Sekolah Terbaik - AlatAntrian.com',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Konsultasi Gratis',
+        href: 'https://wa.me/6282150065758?text=Halo%2C%20saya%20mengunjungi%20website%20alatantrian-kesehatan%20dan%20ingin%20konsultasi.',
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+      { text: 'Kunjungi Web Utama', href: 'https://alatantrian.com' },
+    ]}
+    image={{ src: '~/assets/images/queue.jpg', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      Solusi <span class="hidden xl:inline"> Antrian yang Modern & </span>
+      <span class="text-accent dark:text-white"> Efisien </span> untuk Sekolah dan Kampus
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Tingkatkan kualitas layanan akademik dengan sistem antrian digital yang <span class="font-semibold"
+        >rapi, cepat, dan terintegrasi.</span
+      >
+    </Fragment>
+  </Hero>
+
+  <!-- Brands Widget ******************* -->
+  <Brands
+    title="Dipercaya oleh Instansi Pendidikan Terkemuka"
+    subtitle="Bergabunglah dengan puluhan instansi pendidikan yang telah memodernisasi pelayanannya"
+    icons={[]}
+    images={[
+      {
+        src: '~/assets/images/ITB.png',
+      },
+      {
+        src: '~/assets/images/UI.png',
+        alt: 'Universitas Indonesia',
+      },
+      {
+        src: '~/assets/images/Tel-u.png',
+        alt: 'Telkom University',
+      },
+      {
+        src: '~/assets/images/binus.png',
+        alt: 'Binus University',
+      },
+      {
+        src: '~/assets/images/moklet.png',
+      },
+      {
+        src: '~/assets/images/kemendikbud.webp',
+      },
+      {
+        src: '~/assets/images/brawijaya.png',
+      },
+      {
+        src: '~/assets/images/UGM.png',
+      },
+      {
+        src: '~/assets/images/UNAIR.png',
+      },
+      {
+        src: '~/assets/images/ITS.png',
+      },
+      // Tambahkan logo lain di sini nanti
+    ]}
+  />
+  <!-- Note Widget ******************* -->
+
+  <Note title="Filosofi:" description="Simplicity, Best Practices and High Performance" />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="fitur"
+    tagline="Keunggulan Utama"
+    title="Mengapa Instansi Pendidikan Perlu Beralih ke Digital?"
+    subtitle="Fitur canggih yang dirancang khusus untuk efisiensi Fasilitas layanan"
+    items={[
+      {
+        title: 'Sistem Antrian Digital Siap Pakai',
+        description:
+          'Mudah diterapkan untuk berbagai layanan kampus/sekolah seperti bagian administrasi, tata usaha, perpustakaan, keuangan, hingga loket pendaftaran.',
+        icon: 'tabler:brand-steam',
+      },
+      {
+        title: 'Booking Online via Mobile',
+        description:
+          'Pasien bisa ambil nomor antrian dari rumah lewat aplikasi atau WhatsApp. Ruang tunggu tidak lagi sesak dan semrawut.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Meningkatkan Efisiensi Layanan Akademik',
+        description:
+          'Mengurangi kerumunan, mempercepat alur pelayanan, dan memberikan pengalaman yang lebih tertib bagi siswa, orang tua, dan mahasiswa.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Notifikasi Panggilan Suara',
+        description:
+          'Panggilan nomor antrian otomatis dengan suara manusia yang jernih (Voice Over), bukan suara robot yang kaku.',
+        icon: 'tabler:volume',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Hardware Tangguh"
+    title="Hardware Kiosk Elegan & Tahan Banting"
+    items={[
+      {
+        title: 'Plat Besi Anti-Karat',
+        description:
+          'Dibuat dengan material plat besi tebal dengan finishing powder coating yang tahan lama dan anti-gores.',
+      },
+      {
+        title: 'Touchscreen Responsif',
+        description: 'Layar sentuh industrial grade yang sensitif dan tahan pemakaian intensitas tinggi (24/7).',
+      },
+      {
+        title: 'Printer Thermal Kecepatan Tinggi',
+        description: 'Cetak tiket antrian dalam hitungan detik dengan auto-cutter, mencegah antrian macet di mesin.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hardware.jpg',
+      alt: 'Mesin Antrian Kiosk',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Desain Modern & Customizable</h3>
+      Hardware kami tidak hanya fungsional, tapi juga mempercantik estetika lobi Administrasi Anda. Warna dan branding stiker
+      bisa disesuaikan dengan identitas instansi.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Dashboard Admin',
+        description: `admin dapat memantau jumlah antrian setiap loket.`,
+      },
+      {
+        title: 'Pemanggilan Multi-Loket',
+        description:
+          'Panggilan nomor antrian otomatis dengan suara manusia yang jernih (Voice Over), bukan suara robot yang kaku.',
+      },
+      {
+        title: 'Analytic Reporting',
+        description: ' pengunjung dapat mengetahui jam sibuk layanan kampus/sekolah.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Software.jpg',
+      alt: 'Tampilan Software Antrian',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Software yang Memahami Alur Layanan Pendidikan
+      </h3>
+      Dirancang khusus untuk workflow kampus/sekolah, bukan sekadar software antrian bank biasa.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Bagaimana Cara Implementasinya?"
+    tagline="Alur Kerjasama"
+    items={[
+      {
+        title: 'Langkah 1: Konsultasi & Survey',
+        description:
+          'Tim kami akan berdiskusi dengan tim IT Anda untuk memetakan alur antrian dan kebutuhan. Jika diperlukan, kami lakukan survey lokasi.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Langkah 2: Penawaran & Demo',
+        description:
+          'Kami berikan proposal spesifikasi teknis (bisa untuk E-Katalog) dan melakukan demo produk agar Anda yakin dengan solusinya.',
+        icon: 'tabler:presentation',
+      },
+      {
+        title: 'Langkah 3: Instalasi & Bridging',
+        description:
+          'Pemasangan Kiosk, TV Display, dan instalasi jaringan. Tim programmer kami melakukan bridging V-Claim hingga status "Connected".',
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Siap Melayani Mahasiswa & Siswa!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Teknisi sedang instalasi',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Layanan Purna Jual & Support"
+    subtitle="Kami tidak hanya menjual alat, tapi menjamin kelancaran operasional pelayanan RS Anda jangka panjang."
+    tagline="Komitmen Kami"
+    items={[
+      {
+        title: 'Garansi Resmi 1 Tahun',
+        description: 'Jaminan ganti sparepart baru jika terjadi kerusakan manufaktur pada Kiosk, PC, atau Printer.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Teknisi Ready Visit',
+        description:
+          'Tim teknisi kami siap datang ke lokasi (On-Site) untuk perbaikan jika kendala tidak bisa diselesaikan secara remote.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Remote Support 24/7',
+        description:
+          'Bantuan teknis via WhatsApp/TeamViewer kapan saja saat terjadi kendala pada software atau jaringan.',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Update Software Gratis',
+        description: 'Mendapatkan update fitur terbaru dan penyesuaian jika ada perubahan regulasi (Free Maintenance).',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Sparepart Ready Stock',
+        description: 'Ketersediaan suku cadang (Thermal Paper, Printer Head, Touchscreen) selalu terjamin.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Training Petugas',
+        description:
+          'Pelatihan lengkap untuk admin, mahasiswa, dan tim IT instansi pendidikan hingga mahir mengoperasikan sistem.',
+        icon: 'tabler:school',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Wawasan & Studi Kasus"
+    information={`Temukan artikel terbaru seputar regulasi antrian BPJS, tips akreditasi RS, dan studi kasus implementasi di berbagai instansi. Edukasi adalah kunci modernisasi.`}
+  />
+
+  <!-- Testimonials Widget ******* -->
+
+  <Testimonials
+    title="Kata Mereka Tentang Kami"
+    subtitle="Dengarkan pengalaman langsung dari Rektor, Kepala sekolah, Kepala IT, dan Manajer Pelayanan yang telah menggunakan sistem kami."
+    testimonials={[
+      {
+        testimonial: `Integrasi antrian online sangat membantu saat jam-jam sibuk. Mahasiswa bisa mengantre dari smartphone tanpa menunggu lama.`,
+        name: 'Prof. Ir. Mochammad Amin Alamsjah, M.Si., Ph.D.',
+        job: ' Wakil Rektor Bidang Akademik',
+        image: {
+          src: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80',
+          alt: 'Dr. Budi Santoso',
+        },
+      },
+      {
+        testimonial: `Display antriannya informatif dan sangat membantu dalam mengelola peminjaman buku. Proses jadi lebih tenang dan teratur.`,
+        name: 'Siti Aminah, S.pd., M.pd.',
+        job: 'Kepala tim IT Sekolah Tinggi Ilmu Kesehatan',
+        image: {
+          src: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80',
+          alt: 'Siti Aminah Image',
+        },
+      },
+      {
+        testimonial: `Hardware Kiosk-nya kokoh dan desainnya elegan, sangat pas ditaruh di lobi RS kami yang baru renovasi. Printer thermal-nya juga awet, jarang macet meski melayani 500+ pasien per hari.`,
+        name: 'Rahmat S.Kom',
+        job: 'Kepala Sekolah Menengah Kejuruan',
+        image: {
+          src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80',
+          alt: 'Rahmat Hidayat Image',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Pertanyaan Umum (FAQ)"
+    subtitle="Hal yang sering ditanyakan oleh manajemen Rumah Sakit sebelum bekerjasama."
+    tagline="Informasi"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Apakah bisa custom tampilan untuk branding sekolah?',
+        description: 'Bisa, termasuk warna, logo, dan layout display',
+      },
+      {
+        title: 'Bisa integrasi dengan website kampus atau aplikasi mahasiswa?',
+        description: 'Jangan khawatir, Kami menyediakan API untuk integrasi sistem internal kampus.',
+      },
+      {
+        title: 'Berapa lama garansi hardware?',
+        description:
+          'Kami memberikan garansi sparepart 1 tahun (tukar baru) dan garansi service seumur hidup selama Anda berlangganan paket maintenance.',
+      },
+      {
+        title: 'Apakah bisa custom alur antrian sesuai SOP kami?',
+        description:
+          'Sangat bisa. Tim teknis kami akan menyesuaikan logika software sesuai dengan SOP alur pasien unik di Rumah Sakit Anda.',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Instansi Pendidikan', amount: '50+' },
+      { title: 'Pengurangan Waktu Tunggu', amount: '40%' },
+      { title: 'Lolos Uji Fungsi (Bridging)', amount: '100%' },
+      { title: 'Dukungan Teknis', amount: '24/7' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Hubungi Kami',
+        href: 'https://wa.me/6282150065758?text=Halo%2C%20saya%20mengunjungi%20website%20alatantrian-kesehatan%20dan%20ingin%20konsultasi.', // Ganti nomor WA
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Siap Meningkatkan Kepuasan Mahasiswa/Siswa Anda? </Fragment>
+
+    <Fragment slot="subtitle">
+      Jangan biarkan antrian lama merusak citra instansi anda. <br class="hidden md:inline" />
+      Dapatkan proposal penawaran dan demo gratis hari ini.
+    </Fragment>
+  </CallToAction>
+</Layout>
